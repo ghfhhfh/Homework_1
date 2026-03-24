@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Elements</title>
+</head>
+<body>
+    <fieldset>
+    <legend>Contact Form</legend>
+   <form action="/submit" method="post">
+       <label for="name">Name:</label>
+       <input type="text" id="name" name="name" required>
+       <label for="email">Email:</label>
+       <input type ="email" id="email" name="email" required>
+       <label for="password">Password:</label>
+       <input type="password" id="password" name="password" required>
+       <label for="message">Message:</label>
+       <textarea id="message" name="message" rows="5" cols="20" placeholder="Enter your message here..."></textarea>
+        <label for="country">Country:</label>
+       <select id="country" name="country" required>
+           <option value="">Select your country</option>
+           <option value="az">Azerbaijan</option>
+           <option value="am">Armenia</option>
+           <option value="by">Belarus</option>
+           <option value="kz">Kazakhstan</option>
+           <option value="kg">Kyrgyzstan</option>
+           <option value="md">Moldova</option>
+           <option value="ru">Russia</option>
+           <option value="tj">Tajikistan</option>
+           <option value="uz">Uzbekistan</option>
+       </select>
+       <button type="submit">Submit</button>
+       <label for="message">Message:</label>
+       <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+       <button type="reset">Reset</button>
+   </fieldset>    
+   </form>
+</body>
+</html>
