@@ -1,0 +1,18 @@
+p {
+   color: blue;
+   font-size: 50px;
+}
+.members{
+    color: pink;
+    font-size: 20px;
+    border: 15px solid pink;
+}
+h3{
+    color: yellow;
+    font-size: 52px;
+}
+#history{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;  /* Цвет текста поменян  на красный, по скольку селектор по айди имеет первостепеннее приоритет, и потому цвет был изменен на красный, не синий*/ 
+    font-size: 200px;  
+}
