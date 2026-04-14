@@ -1,0 +1,25 @@
+p {
+    color: gray;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+h1{
+    color: blue;
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+.image-container {
+    background-image: url("Bingo.jpg");
+    background-color: brown;
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    background-size: cover;
+}
+div {
+    padding: 30px;
+    margin: 30px;
+    border: 12px solid black;
+}
