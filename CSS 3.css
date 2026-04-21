@@ -1,0 +1,26 @@
+
+ .box1 {
+width: 100px;
+height: 100px;
+background-color: #2c536d; 
+}
+.text1{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 20 rem; 
+}
+.text1{
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 20 rem; 
+}
+.box2 {
+    background-color: rgb(135, 206, 235); 
+    width: 100px;
+    height: 100px;
+}
+.box3 {
+   width: 100px;
+    height: 100px;
+background-color:#DC143C; 
+}
