@@ -1,140 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metro: Last Light</title>
-    <style>
-        /* --- Общие стили для атмосферы Metro: Last Light --- */
-        body {
-            background-color: #111111;
-            color: #b5b5b5;
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #ff4500; /* Оранжевый цвет спартанского ордена */
-            text-transform: uppercase;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-        .section {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            border-left: 5px solid #ff4500;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-        }
-        /* Стиль для блоков с теорией */
-        .theory-box {
-            background-color: #222;
-            border: 1px dashed #00ff66; /* Зеленый "радиационный" акцент */
-            padding: 15px;
-            margin-bottom: 15px;
-            color: #00ff66;
-            font-size: 0.9em;
-        }
-        img {
-            border: 2px solid #444;
-            max-width: 200px;
-            height: auto;
-        }
-        /* --- Стили для Задания 2 --- */
-        /* Превращаем блочные абзацы в линейные */
-        .inline-p {
-            display: inline;
-            background-color: #2a2a2a;
-            padding: 5px 10px;
-            margin-right: 10px;
-            border: 1px solid #444;
-            color: #ffffff;
-        }
-        /* Превращаем линейную картинку в блочную */
-        .block-img {
-            display: block;
-            margin: 20px 0;
-            border-color: #ff4500;
-        }
-        /* --- Стили для Задания 3 --- */
-        /* Контейнер-бункер (блочный элемент) */
-        .metro-bunker {
-            background-color: #0d0d0d;
-            border: 2px solid #ff4500;
-            padding: 25px;
-            margin-top: 15px;
-        }
-        /* Превращаем все вложенные элементы в блочные и выравниваем по вертикали */
-        .metro-bunker p,
-        .metro-bunker img,
-        .metro-bunker a {
-            display: block;
-            margin-bottom: 15px;
-            width: fit-content; /* Чтобы рамки/фоны не растягивались искусственно, если это не нужно */
-        }
-        .metro-bunker a {
-            color: #00ff66;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #00ff66;
-            padding: 5px 10px;
-        }
-        .metro-bunker a:hover {
-            background-color: #00ff66;
-            color: #000;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Домашнее задание</title>
+<style>
+.inline-p {
+    display: inline;
+    background: #ccc;
+}
+.block-img {
+    display: block;
+    margin-top: 10px;
+}
+.container {
+    display: block;
+    padding: 15px;
+    border: 2px solid #000;
+}
+.container p, .container img, .container a {
+    display: block;
+    margin-bottom: 10px;
+}
+</style>
 </head>
 <body>
-    <h1>Архив Д6: Изучение структуры элементов (CSS)</h1>
-    <div class="section">
-        <h2>Задание 1: Поведение элементов по умолчанию</h2>
-        <div class="theory-box">
-            <strong>Заметки сталкера:</strong><br>
-            • Блочные элементы (h1, p, div) занимают всю доступную ширину строки. Каждый следующий блочный элемент начинается с новой строки.<br>
-            • Линейные элементы (img, a, span) занимают только то место, которое необходимо для их содержимого. Они выстраиваются друг за другом в одну строку.
-        </div>
-        <h3>Заголовок h1 (Блочный)</h3>
-        <p>Абзац p (Блочный): Если не доверять людям, они не будут доверять тебе. Метро — это наш последний дом, и мы должны защищать его.</p>
-        
-        <div style="background-color: #252525; padding: 10px;">
-            Контейнер div (Блочный): Склад патронов калибра 5.45. Занимает всю ширину строки.
-        </div>
-
-        <p>Ниже представлены две картинки (img). Так как они <strong>линейные по умолчанию</strong>, они встанут в одну строку (если помещаются по ширине):</p>
-        <img src="https://cs.pikabu.ru/post_img/2013/07/17/8/1374059285_1276509891.jpg" alt="Сталкер в противогазе">
-        <img src="https://i.playground.ru/p/2HXWqm1FNom7MIyJbrYAXA.jpeg" alt="Заброшенный туннель">
-    </div>
-    <div class="section">
-        <h2>Задание 2: Преобразование элементов через display</h2>
-        <div class="theory-box">
-            <strong>Заметки сталкера:</strong><br>
-            • С помощью свойства display: inline мы заставили абзацы потерять свои блочные свойства и встать в ряд.<br>
-            • С помощью display: block картинка начала вести себя как блок: перенеслась на новую строку и не пускает никого рядом с собой.
-        </div>
-        <h3>Блочные абзацы превращены в линейные (display: inline):</h3>
-        <p class="inline-p">Рейнджер Артем</p>
-        <p class="inline-p">Полковник Мельник</p>
-        <p class="inline-p">Хан</p>
-        <h3>Линейная картинка превращена в блочную (display: block):</h3>
-        <img class="block-img" src="https://i.playground.ru/p/02Bsbu1ThDcch2nlhXYdGA.jpeg" alt="Мутант Черный">
-        <span>Этот текст идет ПОСЛЕ картинки. Поскольку картинка стала блочной, текст перенесся на новую строку, а не встал рядом.</span>
-    </div>
-    <div class="section">
-        <h2>Задание 3: Работа с вложенными элементами в Бункере</h2>
-        <div class="theory-box">
-            <strong>Заметки сталкера:</strong><br>
-            • Мы создали главный контейнер div (.metro-bunker). Внутри него лежат абзац, картинка и ссылка.<br>
-            • Изначально картинка и ссылка выстроились бы в линию. Но мы применили к ним display: block, поэтому они послушно выровнялись по вертикали сверху вниз.
-        </div>
-        <div class="metro-bunker">
-            <p><strong>[СЕКТОР Д6 — ОРУЖЕЙНАЯ]</strong></p>
-            <img src="https://i.playground.ru/p/zJAsf3WB8rMQiYPlqmru1Q.jpeg" alt="Гермозатвор">   
-            <a href="https://github.com" target="_blank">Открыть терминал связи с Ганзой</a>
-        </div>
-    </div>
-
+<!-- 
+Блочные элементы начинаются с новой строки и занимают всю доступную ширину контейнера.
+Линейные/строчные элементы  занимают только то место, которое нужно для их содержимого, и выстраиваются в одну строку друг за другом.
+-->
+<h1>Задание 1: Блочные и линейные элементы</h1>
+<p>Это абзац. По умолчанию он блочный и занимает всю ширину.</p>
+<div style="background: #eee;">Это div. Тоже блочный элемент.</div>
+<p>Ниже две картинки. Они линейные, поэтому встанут в одну строку:</p>
+<img src="https://cs.pikabu.ru/post_img/2013/07/17/8/1374059285_1276509891.jpg" width="150" alt="img1">
+<img src="https://i.playground.ru/p/2HXWqm1FNom7MIyJbrYAXA.jpeg" width="150" alt="img2">
+<h2>Задание 2: Преобразование элементов</h2>
+<!-- display: inline меняет поведение на линейное -->
+<p class="inline-p">Теперь этот абзац линейный.</p>
+<p class="inline-p">И этот тоже. Они идут в одну строку.</p>
+<!-- display: block меняет поведение на блочное -->
+<img class="block-img" src="https://i.playground.ru/p/02Bsbu1ThDcch2nlhXYdGA.jpeg" width="150" alt="img3">
+<span>Картинка стала блочной, поэтому этот текст спустился на новую строку.</span>
+<h2>Задание 3: Работа с вложенными элементами</h2>
+<div class="container">
+    <p>Абзац внутри контейнера</p>
+    <img src="https://i.playground.ru/p/zJAsf3WB8rMQiYPlqmru1Q.jpeg" width="150" alt="img4">
+    <a href="https://github.com">Ссылка (теперь блочная)</a>
+</div>
 </body>
 </html>
