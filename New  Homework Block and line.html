@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Домашнее задание</title>
+<style>
+.inline-p {
+    display: inline;
+    background: #ccc;
+}
+.block-img {
+    display: block;
+    margin-top: 10px;
+}
+.container {
+    display: block;
+    padding: 15px;
+    border: 2px solid #000;
+}
+.container p, .container img, .container a {
+    display: block;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<!-- 
+Блочные элементы (например, h1, p, div) начинаются с новой строки и занимают всю доступную ширину контейнера.
+Линейные/строчные элементы (например, img, a, span) занимают только то место, которое нужно для их содержимого, и выстраиваются в одну строку друг за другом.
+-->
+<h1>Задание 1: Блочные и линейные элементы</h1>
+<p>Это абзац. По умолчанию он блочный и занимает всю ширину.</p>
+<div style="background: #eee;">Это div. Тоже блочный элемент.</div>
+<p>Ниже две картинки. Они линейные, поэтому встанут в одну строку:</p>
+<img src="https://cs.pikabu.ru/post_img/2013/07/17/8/1374059285_1276509891.jpg" width="150" alt="img1">
+<img src="https://i.playground.ru/p/2HXWqm1FNom7MIyJbrYAXA.jpeg" width="150" alt="img2">
+<h2>Задание 2: Преобразование элементов</h2>
+<!-- display: inline меняет поведение на линейное -->
+<p class="inline-p">Теперь этот абзац линейный.</p>
+<p class="inline-p">И этот тоже. Они идут в одну строку.</p>
+<!-- display: block меняет поведение на блочное -->
+<img class="block-img" src="https://i.playground.ru/p/02Bsbu1ThDcch2nlhXYdGA.jpeg" width="150" alt="img3">
+<span>Картинка стала блочной, поэтому этот текст спустился на новую строку.</span>
+<h2>Задание 3: Работа с вложенными элементами</h2>
+<div class="container">
+    <p>Абзац внутри контейнера</p>
+    <img src="https://i.playground.ru/p/zJAsf3WB8rMQiYPlqmru1Q.jpeg" width="150" alt="img4">
+    <a href="https://github.com">Ссылка (теперь блочная)</a>
+</div>
+</body>
+</html>
